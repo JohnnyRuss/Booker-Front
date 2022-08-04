@@ -1,0 +1,32 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.description {
+  margin-top: 3rem;
+
+  .descriptionSlogan {
+    font-size: size('headingSmallSize');
+    text-transform: capitalize;
+
+    @include respond(tab-portrate) {
+      font-size: size('headingSecondarySize');
+    }
+
+    @include respond(phone) {
+      font-size: size('extraLargeSize');
+    }
+
+    @include respond(phone-small) {
+      font-size: size('bigSize');
+    }
+  }
+
+  .descriptionInfo {
+    &::first-letter {
+      text-transform: capitalize;
+    }
+
+    @include respond(phone) {
+      font-size: size('smallSize');
+    }
+  }
+}

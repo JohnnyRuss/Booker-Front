@@ -1,0 +1,11 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.navContainer {
+  background: color('blueColor');
+  color: color('whiteColor');
+  padding-bottom: 2rem;
+
+  @include respond(tab-landscape) {
+    padding: 0 2rem 2rem;
+  }
+}

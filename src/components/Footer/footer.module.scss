@@ -1,0 +1,29 @@
+@use '../../styles/helpers/helpers' as *;
+
+.footer {
+  background: color('whiteShadeColor');
+  color: color('blueColor');
+  padding: 8rem 0 5rem 0;
+
+  @include respond(tab-landscape) {
+    padding: 8rem 2rem 5rem 2rem;
+  }
+
+  %center {
+    max-width: $container-width;
+    margin: 0 auto;
+  }
+
+  .footerList {
+    @extend %center;
+    @include flexBox;
+    justify-content: space-between;
+    text-transform: capitalize;
+  }
+
+  .copy {
+    @extend %center;
+    margin-top: 4rem;
+    font-size: size('smallerSize');
+  }
+}

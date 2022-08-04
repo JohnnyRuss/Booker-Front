@@ -1,0 +1,38 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.navigation {
+  max-width: $container-width;
+  margin: 0 auto;
+  height: 6rem;
+  @include flexBox;
+  @include flexProperty(flex-start, center);
+  gap: 2rem;
+
+  .logo {
+    text-transform: uppercase;
+    font-size: size('largeSize');
+    font-weight: weight('boldWeight');
+  }
+
+  .btn {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-left: auto;
+    }
+
+    & button {
+      background: color('whiteColor');
+      color: color('blueColor');
+      padding: 0.8rem 1.5rem;
+
+      @include respond(phone) {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+
+  .userName {
+    margin-left: auto;
+  }
+}

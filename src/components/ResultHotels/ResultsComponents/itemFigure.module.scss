@@ -1,0 +1,15 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.figure {
+  grid-area: 1 / 1 / -1 / 2;
+
+  @include respond(tab-portrate) {
+    grid-area: 1 / 1 / 2 / -1;
+    max-height: 25rem;
+  }
+
+  .image {
+    @include fitImage;
+    aspect-ratio: 1/1;
+  }
+}

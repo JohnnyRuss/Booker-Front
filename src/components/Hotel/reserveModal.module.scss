@@ -1,0 +1,80 @@
+@use '../../styles/helpers/helpers' as *;
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  @include flexBox;
+  @include flexProperty(center, center);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
+
+  .reserveModal {
+    width: 60rem;
+    height: 70%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    @include boxShadowBlack(0rem, 1rem, 0.2);
+    background: color('whiteColor');
+
+    @include respond(tab-portrate){
+      width: 50rem;
+    }
+
+    @include respond(phone){
+      width: 80vw;
+    }
+  }
+
+  .roomTitle,
+  .title {
+    text-transform: capitalize;
+  }
+
+  .roomsList {
+    @include flexBox(column);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .room {
+    @include flexBox;
+    @include flexProperty(space-between, stretch);
+    gap: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid grey;
+  }
+
+  .roomInfo {
+    flex: 5;
+
+    & p {
+      font-size: size('smallSize');
+    }
+  }
+
+  .roomNums {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1.5rem, 2rem));
+    align-items: start;
+    justify-content: end;
+  }
+
+  .roomNumItem {
+    @include flexBox(column);
+    gap: 0;
+  }
+
+  .roomNum {
+    display: inline-block;
+    font-size: size('smallestSize');
+    margin-top: 1rem;
+  }
+
+  .roomNumInp {
+    width: 2rem;
+  }
+}

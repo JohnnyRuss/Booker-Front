@@ -1,0 +1,11 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.ratingCubic {
+  background: color('blueColor');
+  color: color('whiteColor');
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

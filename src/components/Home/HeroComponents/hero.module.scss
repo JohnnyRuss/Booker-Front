@@ -1,0 +1,25 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.heroContainer {
+  background: color('blueColor');
+  color: color('whiteColor');
+
+  @include respond(tab-landscape) {
+    padding: 0 2rem;
+  }
+
+  .hero {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 3rem 0 10rem 0;
+    position: relative;
+  }
+
+  .regBtn {
+    margin-top: 3rem;
+
+    @include respond(phone-small){
+      margin-bottom: 2rem;
+    }
+  }
+}

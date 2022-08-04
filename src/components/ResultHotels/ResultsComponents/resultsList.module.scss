@@ -1,0 +1,6 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.resultsList {
+  @include flexBox(column);
+  gap: 4rem;
+}

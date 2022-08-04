@@ -1,0 +1,17 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.resultItem {
+  display: grid;
+  grid-template: repeat(1, min-content) / 30% 1fr 20%;
+  gap: 1rem;
+  padding: 0.5rem;
+  border: 1px solid color('darkGreyColor');
+  @include boxShadowBlack(0rem, 0.8rem, 0.3);
+
+  @include respond(tab-portrate) {
+    grid-template: repeat(2, min-content) / 1fr 25%;
+  }
+  @include respond(phone) {
+    grid-template: repeat(3, min-content) / 1fr;
+  }
+}

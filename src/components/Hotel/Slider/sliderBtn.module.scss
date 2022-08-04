@@ -1,0 +1,28 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5rem;
+  height: 5rem;
+  @include flexBox;
+  @include flexProperty(center, center);
+  font-size: size('headingSize');
+  border-radius: 2rem;
+  color: #fff;
+
+  & + .left {
+    left: 0;
+  }
+
+  & + .right {
+    right: 0;
+  }
+
+  & + .close {
+    font-size: size('headingSecondarySize');
+    top: 2rem;
+    right: 0rem;
+  }
+}

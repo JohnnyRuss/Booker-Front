@@ -1,0 +1,38 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.typesBox {
+  max-width: $container-width;
+  margin: 0 auto;
+  margin-top: 15rem;
+
+  @include respond(tab-landscape) {
+    padding: 0 2rem;
+  }
+
+  @include respond(phone-small) {
+    margin-top: 10rem;
+  }
+
+  .typesTitle {
+    text-transform: capitalize;
+  }
+
+  .ratedCard {
+    transition: transform 0.2s ease-out;
+    cursor: grab;
+    @include boxShadowBlack(0rem, 1rem, 0.2);
+    animation: none !important;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .carouselContainer {
+    padding: 3rem 1rem;
+  }
+
+  .carouselItem {
+    padding: 2rem 1.5rem;
+  }
+}

@@ -1,0 +1,51 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.subscribeContainer {
+  background: color('blueColor');
+  color: color('whiteColor');
+  margin-top: 10rem;
+  padding: 5rem 0;
+
+  .subscribe {
+    max-width: $container-width;
+    margin: 0 auto;
+    @include flexBox(column);
+    @include flexProperty(center, center);
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: size('largeSize');
+    text-transform: capitalize;
+  }
+
+  .description {
+    margin-top: -1rem;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  .form {
+    margin-top: 4rem;
+    @include flexBox;
+    @include flexProperty(flex-start, center);
+    gap: 1rem;
+
+    @include respond(phone-small) {
+      @include flexBox(column);
+    }
+  }
+
+  .inp {
+    height: 4rem;
+    width: 30rem;
+    padding: 0 1rem;
+    outline: none;
+    color: color('darkGreyColor');
+    &::placeholder {
+      font-style: italic;
+    }
+  }
+}

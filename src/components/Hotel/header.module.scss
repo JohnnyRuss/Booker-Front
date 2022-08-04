@@ -1,0 +1,48 @@
+@use '../../styles/helpers/helpers' as *;
+
+.heading {
+  @include flexBox;
+  @include flexProperty(space-between);
+
+  @include respond(tab-portrate) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  %firstLetter {
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  .infoBox {
+    @include flexBox(column);
+    gap: 1rem;
+  }
+
+  .title {
+    text-transform: capitalize;
+    font-size: size('bigSize');
+  }
+
+  .adress {
+    font-size: size('smallSize');
+  }
+
+  .description {
+    color: color('blueColor');
+    font-weight: weight('boldWeight');
+    @extend %firstLetter;
+  }
+
+  .offer {
+    @extend %firstLetter;
+    font-weight: weight('mediumWeight');
+    color: green;
+  }
+
+  .btn {
+    color: color('whiteColor');
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,9 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.results {
+  flex: 6;
+
+  @include respond(tab-portrate) {
+    flex: 3;
+  }
+}

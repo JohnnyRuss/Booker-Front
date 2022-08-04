@@ -1,0 +1,62 @@
+@use '../../styles/helpers/helpers' as *;
+
+.info {
+  @include flexBox;
+  gap: 5rem;
+  margin-top: 4rem;
+
+  @include respond(tab-portrate) {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .title {
+    text-transform: capitalize;
+    font-size: size('bigSize');
+    margin-bottom: 2rem;
+  }
+
+  .infoText {
+    font-size: size('smallSize');
+  }
+
+  .offerBox {
+    min-width: 25rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: rgba(color('blueTintColor'), 0.3);
+    @include boxShadowBlack(0rem, 1rem, 0.3);
+  }
+
+  .offerTitle {
+    font-size: size('smallSize');
+    font-weight: weight('boldWeight');
+    margin-bottom: 1rem;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  .offerDescrption {
+    font-size: size('smallSize');
+    margin-bottom: 1rem;
+  }
+
+  .offerPrice {
+    margin-bottom: 2rem;
+
+    .price {
+      font-weight: weight('boldWeight');
+
+      &:after {
+        content: ' ';
+      }
+    }
+  }
+
+  .btn {
+    color: color('whiteColor');
+    font-size: size('smallSize');
+  }
+}

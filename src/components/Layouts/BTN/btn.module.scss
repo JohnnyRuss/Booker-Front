@@ -1,0 +1,8 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.btn {
+  text-transform: capitalize;
+  background: color('blueTintColor');
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+}

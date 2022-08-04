@@ -1,0 +1,123 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.searchBar {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(40%);
+  @include flexBox;
+  @include flexProperty(space-between, center);
+  padding: 0.5rem 3rem;
+  border-radius: 1rem;
+  border: 2px solid orange;
+  background: color('whiteColor');
+
+  @include respond(tab-portrate) {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  }
+
+  @include respond(phone-small) {
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+    justify-items: center;
+    row-gap: 1rem;
+  }
+
+  .searchBarItem {
+    position: relative;
+    @include flexBox;
+    @include flexProperty(flex-start, center);
+    gap: 1rem;
+    color: color('darkGreyColor');
+
+    @include respond(phone-small) {
+      width: 100%;
+      @include flexProperty(center, center);
+    }
+  }
+
+  .searchBtn,
+  .dateItem {
+    @include respond(tab-portrate) {
+      justify-self: end;
+    }
+
+    @include respond(phone-small) {
+      justify-self: center;
+    }
+  }
+
+  .stayItem {
+    @include respond(phone-small) {
+      margin-left: 3rem;
+    }
+  }
+
+  .stayInput {
+    border: none;
+    outline: none;
+  }
+
+  .dateRange {
+    position: absolute;
+    z-index: 2;
+    top: 3.5rem;
+    left: -3.5rem;
+
+    @include respond(tab-portrate) {
+      top: 3rem;
+      left: -95%;
+    }
+
+    @include respond(phone-small) {
+      top: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .options {
+    position: absolute;
+    z-index: 2;
+    top: 3.5rem;
+    @include flexBox(column);
+    gap: 1rem;
+    padding: 2rem;
+    text-transform: capitalize;
+    background: color('whiteColor');
+    @include boxShadowBlack(0rem, 1rem, 0.25);
+  }
+
+  .optionItem {
+    @include flexBox;
+    @include flexProperty(flex-start, center);
+    gap: 1rem;
+    padding: 0 1rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid color('darkGreyColor');
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .optKindOf {
+    margin-right: 4rem;
+  }
+
+  .optBtn {
+    width: 2.5rem;
+    height: 2.5rem;
+    @include flexBox;
+    @include flexProperty(center, center);
+    background: color('whiteShadeColor');
+    border: 1px solid color('darkGreyColor');
+    border-radius: 0.5rem;
+
+    &:not(:last-child) {
+      margin-left: auto;
+    }
+  }
+}

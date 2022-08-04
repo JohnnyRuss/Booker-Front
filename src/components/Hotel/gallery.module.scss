@@ -1,0 +1,28 @@
+@use '../../styles/helpers/helpers' as *;
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1rem;
+  column-gap: 2.2rem;
+  margin-top: 5rem;
+
+  @include respond(tab-landscape) {
+    margin-right: 5rem;
+  }
+
+  @include respond(phone-small) {
+    grid-template-columns: repeat(2, 1fr);
+    margin-right: 3rem;
+  }
+
+  .figure {
+    height: 100%;
+    aspect-ratio: 2/1;
+  }
+
+  .image {
+    @include fitImage;
+    cursor: pointer;
+  }
+}

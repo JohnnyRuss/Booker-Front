@@ -1,0 +1,41 @@
+@use '../../styles//helpers/helpers' as *;
+
+.authForm {
+  max-width: $container-width;
+  margin: 0 auto;
+  height: 80vh;
+  @include flexBox(column);
+  @include flexProperty(center, center);
+  gap: 2rem;
+
+  .inpBox {
+    @include flexBox(column);
+    @include flexProperty(center, flex-start);
+    gap: 0.5rem;
+  }
+
+  .inpLabel {
+    text-transform: capitalize;
+    font-size: size('smallSize');
+    cursor: pointer;
+    font-weight: weight('boldWeight');
+  }
+
+  .inp {
+    padding: 0.5rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      font-style: italic;
+      font-size: size('smallSize');
+    }
+  }
+
+  .authBtn {
+    color: color('whiteColor');
+    text-transform: uppercase;
+  }
+}

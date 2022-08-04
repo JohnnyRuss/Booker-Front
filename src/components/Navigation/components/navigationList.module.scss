@@ -1,0 +1,41 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.heroNav {
+  max-width: $container-width;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  @include flexBox;
+  gap: 2rem;
+
+  @include respond(phone-small) {
+    flex-wrap: wrap;
+  }
+
+  .heroNavItem {
+    @include flexBox;
+    @include flexProperty(flex-start, center);
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid color('whiteColor');
+    border-radius: 0.8rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: all 0.2s ease;
+
+    @include respond(phone) {
+      font-size: size('smallerSize');
+    }
+
+    & svg {
+      font-size: size('regullarSize');
+
+      @include respond(phone) {
+        font-size: size('smallSize');
+      }
+    }
+
+    &:hover {
+      border-color: orange;
+    }
+  }
+}
