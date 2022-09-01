@@ -22,7 +22,7 @@ function Registration() {
   async function handleSubmit(e) {
     e.preventDefault();
     setCredentials({ email: '', password: '' });
-    console.log(credentials);
+    // console.log(credentials);
   }
   return (
     <form className={styles.authForm} onSubmit={handleSubmit}>
